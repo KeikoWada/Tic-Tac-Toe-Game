@@ -6,7 +6,9 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+      </style>
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
@@ -14,28 +16,35 @@
     <body class="container-fluid">
 
 <!--sign up page-->
+<div id="first-page">
 <div class="sinUp-Page">
       <h1>Tic Tac Toe Game</h1>
 
-<!--button
-      <form class="form-inline">
+<form id="sign-up" class="border">
+<fieldset>
+ <legend>Sign up!</legend>
+ <input name="credentials[email]" type="text" value="an@example.email">
+ <input name="credentials[password]" type="password" value="an example password">
+ <input name="credentials[password_confirmation]" type="password" value="an example password">
+ <input type="submit" value="Sing up">
+</fieldset>
+</form>
 
-        <div class="form-group">
-          <label for="exampleInputEmail2">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputName2">Password</label>
-          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-        </div>
-        <button type="submit" class="btn btn-default">Send invitation</button>
-      </form>
-</div> -->
-
+<form id="sign-in" class="border">
+  <fieldset>
+    <legend>Sign In!</legend>
+    <input name="credentials[email]" type="text" value="an@example.email">
+  <input name="credentials[password]" type="password" value="an example password">
+    <input type="submit" value="Sign in">
+  </fieldset>
+</form>
+</div>
+</div>
 <!--Game Page-->
+<div id="second-page">
     <h1>Tic Tac Toe Game!</h1>
       <p>Tic-tac-toe is a simple & FUN game for two players, X and O <br> who take turns marking the spaces in a 3×3 grid.<br> The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. </p>
-
+     <div id=game-board>
       <div class="rowOne">
           <div id="1" class="col-md-4 box one">1</div>
           <div id="2" class="col-md-4 box two">2</div>
@@ -52,6 +61,22 @@
           <div id="8" class="col-md-4 box eight">8</div>
           <div id="9" class="col-md-4 box night">9</div>
       </div>
+    </div>
+    <div id="footer">
+      <form id="change-password" class="out">
+        <fieldset>
+        <legend>Change Password?</legend>
+        <input type="submit" value="Change Password">
+      </fieldset>
+      </form>
 
+      <form id="sign-out" class="out">
+        <fieldset>
+        <legend>Sign out</legend>
+        <input type="submit" value="Sign out">
+      </fieldset>
+      </form>
+    </div>
+  </div>
     </body>
 </html>
