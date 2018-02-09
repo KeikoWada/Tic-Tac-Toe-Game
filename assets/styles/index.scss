@@ -1,2 +1,19 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+h1 {
+  position: center;
+}
+
+div {
+  position: center;
+  background-color: pink;
+  height: 150px;
+  width: 80%;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+.selected{
+  background-color: red;
+}
