@@ -2,7 +2,7 @@
 
 # ID=2 sh scripts/json/change-password.sh
 
-curl "https://ga-library-api.herokuapp.com/change-password/${ID}" \
+curl "http://tic-tac-toe.wdibos.com/change-password/:id/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \

@@ -2,7 +2,7 @@
 
 # ID=2 sh scripts/sign-out.sh
 
-curl "https://ga-library-api.herokuapp.com//sign-out/{$ID}" \
+curl "http://tic-tac-toe.wdibos.com/sign-out/{$ID}" \
   --include \
   --request DELETE \
   --header "Content-Type: application/json" \
