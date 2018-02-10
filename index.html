@@ -1,25 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
-</html>
+    <!--sign up page-->
+        <p id="message"</p>
+        <h1>Tic Tac Toe Game</h1>
+        <form id="sign-up" class="border">
+          <fieldset>
+          <!--<legend>Sign up!</legend>
+          <input name="credentials[email]" type="text" value="an@example.email" placeholder="Email" >
+          <input name="credentials[password]" type="password" value="an example password" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" value="an example password" placeholder="Confirm Passsword">
+          <input type="submit" value="Sing up">
+          </fieldset>
+          </form>-->
+            <legend>Sign up!</legend>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Sign up!">
+          </fieldset>
+        </form>
+
+        <form id="sign-in" class="border">
+          <fieldset>
+            <legend>Sign In!</legend>
+            <input name="credentials[email]" type="text" placeholder="Email">
+          <input name="credentials[password]" type="password" placeholder="Password">
+            <input type="submit" value="Sign in">
+          </fieldset>
+        </form>
+
+        <div id="gamePage" class=gamePage>
+        <h1>Tic Tac Toe Game!</h1>
+        <p>Tic-tac-toe is a simple & FUN game for two players, X and O <br> who take turns marking the spaces in a 3×3 grid.<br> The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. </p>
+        <!--<div id=game-board> -->
+        <!--Game Page-->
+          <form id="change-password" class="out">
+          <fieldset>
+            <legend>Change Password?</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" value="Change Password">
+          </fieldset>
+          </form>
+
+          <form id="sign-out" class="out">
+          <fieldset>
+            <legend>Sign out</legend>
+            <input type="submit" value="Sign out">
+          </fieldset>
+          </form>
+
+             <div id="1" class="col-md-4 box one">1</div>
+             <div id="2" class="col-md-4 box two">2</div>
+             <div id="3" class="col-md-4 box three">3</div>
+             <div id="4" class="col-md-4 box four">4</div>
+             <div id="5" class="col-md-4 box five">5</div>
+             <div id="6" class="col-md-4 box six">6</div>
+             <div id="7" class="col-md-4 box seven">7</div>
+             <div id="8" class="col-md-4 box eight">8</div>
+             <div id="9" class="col-md-4 box night">9</div>
+         </div>
+         </body>
+      </html>

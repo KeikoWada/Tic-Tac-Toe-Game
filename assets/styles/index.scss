@@ -1,2 +1,37 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+
+body {
+  background-color: #a5ffad;
+}
+
+h1 {
+  font-family: 'Coming Soon', cursive;
+}
+
+// div {
+// display: none;
+// }
+
+.box {
+  margin: 0 auto;
+  border: 3px solid gray;
+  padding: 50px;
+  font-family: 'Coming Soon', cursive;
+  background-color: pink;
+  height: 150px;
+}
+
+p {
+  font-family: 'Coming Soon', cursive;
+}
+
+.selected {
+  background-color: rgb(137, 255, 241);
+}
+
+#second-page {
+  background-color: rgb(203, 255, 208);
+}
