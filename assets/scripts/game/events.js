@@ -4,7 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 
-const onCreateExample = function (event) {
+const onCreateGame = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
 
@@ -13,10 +13,10 @@ const onCreateExample = function (event) {
     .catch(ui.onCreateFailure)
 }
 
-const addHandlers = () => {
-  $('#example-create').on('submit', onCreateExample)
+const createGame = () => {
+  $('#gameBord').on('submit', onCreateGame)
 }
 
 module.exports = {
-  addHandlers
+  createGame
 }

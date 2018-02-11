@@ -10,7 +10,11 @@ $(() => {
 })
 
 $(() => {
+  // player click -> function 'switchPlayer' happens
+  // create a new Games on the server
   authEvents.addHandlers()
+  example.gameEvent()
+  example.taken()
 })
 
 // use require with a reference to bundle the file and use it in this file
@@ -18,8 +22,3 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
-
-// player click -> function 'switchPlayer' happens
-$(() => {
-  example.gameEvent()
-})

@@ -4,12 +4,12 @@ const config = require('../config')
 const store = require('../store')
 
 const create = function (data) {
+  console.log('data: ', data)
   return $.ajax({
-    url: config.apiOrigin + '/examples',
+    url: config.apiOrigin + '/games',
     method: 'POST',
     headers: {
-      contentType: 'application/json',
-      Authorization: 'Token token=<token>'
+      Authorization: 'Token token=' + store.user.token
     },
     data
   })

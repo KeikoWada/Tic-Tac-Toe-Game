@@ -15,8 +15,15 @@ h1 {
 // display: none;
 // }
 
+.message {
+  font-size: 50px;
+  color: #ab6a32;
+}
+
 .box {
+  font-size: 70px;
   margin: 0 auto;
+  text-align: center;
   border: 3px solid gray;
   padding: 50px;
   font-family: 'Coming Soon', cursive;
@@ -36,7 +43,8 @@ p {
   background-color: rgb(137, 255, 241);
 }
 
-#reset {
-  background-color: rgb(137, 255, 241);
-  color: white;
+.reset {
+  background-color: #ffee92;
+  color: gray;
+  font-size: 40px;
 }
