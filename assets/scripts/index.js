@@ -14,7 +14,7 @@ $(() => {
   // create a new Games on the server
   authEvents.addHandlers()
   example.gameEvent()
-  example.taken()
+  example.reset()
 })
 
 // use require with a reference to bundle the file and use it in this file
