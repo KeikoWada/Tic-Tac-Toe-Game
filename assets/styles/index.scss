@@ -7,31 +7,83 @@ body {
   background-color: #a5ffad;
 }
 
-h1 {
+p {
+  text-align: center;
   font-family: 'Coming Soon', cursive;
 }
 
+.title {
+  text-align: center;
+  font-size: 70px;
+  color: #ff6481;
+  font-weight: bold;
+  font-family: 'Coming Soon', cursive;
+}
+
+.auth {
+  text-align: center;
+}
 // div {
 // display: none;
 // }
 
-.box {
-  margin: 0 auto;
-  border: 3px solid gray;
-  padding: 50px;
+.score-Bord {
+  font-size: 60px;
+  color: gray;
   font-family: 'Coming Soon', cursive;
-  background-color: pink;
-  height: 150px;
 }
 
-p {
+.message {
+  text-align: center;
+  font-size: 50px;
+  color: #ab6a32;
+}
+
+.gameBoard {
+  width: 600px;
+  overflow: auto;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+li {
+  float: left;
+  margin: 5px;
+  height: 150px;
+  width: 150px;
+  font-size: 70px;
   font-family: 'Coming Soon', cursive;
+  background-color: pink;
+  color: brown;
+  list-style: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+li:hover {
+  cursor: pointer;
+  background: yellow;
 }
 
 .selected {
-  background-color: rgb(137, 255, 241);
+  background-color: #89fff1;
 }
 
-#second-page {
-  background-color: rgb(203, 255, 208);
+.clearfix {
+  clear: both;
+}
+
+.reset {
+  border: 0;
+  background-color: #ffee92;
+  color: gray;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 40px;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
 }
