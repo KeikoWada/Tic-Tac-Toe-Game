@@ -23,9 +23,10 @@ p {
 .auth {
   text-align: center;
 }
-// div {
-// display: none;
-// }
+
+.gamePage {
+  display: none;
+}
 
 .score-Bord {
   font-size: 60px;
@@ -67,10 +68,6 @@ li:hover {
 
 .selected {
   background-color: #89fff1;
-}
-
-.clearfix {
-  clear: both;
 }
 
 .reset {

@@ -30,11 +30,11 @@
             <legend>Sign In!</legend>
             <input name="credentials[email]" type="text" placeholder="Email">
             <input name="credentials[password]" type="password" placeholder="Password">
-            <input type="submit" value="Sign in">
+            <button id="in-button" type="submit" value="Sign in">Sign in!</button>
         </fieldset>
         </form>
 
-        <div id="gamePage">
+        <div id="gamePage" class="gamePage">
           <h1 class="title">Tic Tac Toe Game!</h1>
           <p class="intro">Tic-tac-toe is a simple & FUN game for two players, X and O <br> who take turns marking the spaces in a 3×3 grid.<br> The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. </p>
         <!--<div id=game-board> -->
@@ -51,7 +51,7 @@
           <form id="sign-out" class="game-auth">
           <fieldset>
              <legend>Sign out</legend>
-             <input type="submit" value="Sign out">
+             <button id="out-button" type="submit" value="Sign out">Sign-out</button>
           </fieldset>
           </form>
 
@@ -78,13 +78,12 @@
              <li id="6" class="box seven">#</li>
              <li id="7" class="box eight">#</li>
              <li id="8" class="box night">#</li>
-         </ul>
+            </ul>
          </div>
-         </div>
-         <div class="clearfix"></div>
          <footer>
            <input class="btn btn-primary reset" type="reset" value="New Game">
 <!-- <button class="reset">Restart</button> -->
          </footer>
+         </div>
       </body>
       </html>

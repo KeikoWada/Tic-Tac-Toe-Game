@@ -54,57 +54,72 @@ function winner (id) {
   console.log('im here!' + one)
   if (one === x && two === x && three === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
-    $('li').off('click')
+    $('.box').off('click')
     turn = 0
   } else if (four === x && five === x && six === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
-    $('li').off('click')
+    $('.box').off('click')
     turn = 0
   } else if (seven === x && eight === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (one === x && five === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (three === x && five === x && seven === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (one === x && four === x && seven === x) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (two === x && five === x && eight === x) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (three === x && six === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (one === o && two === o && three === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (four === o && five === o && six === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (seven === o && eight === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (one === o && five === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (three === o && five === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (one === o && four === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (two === o && five === o && eight === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (three === o && six === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   } else if (turn === 9) {
     $('.message').text('Tie!')
-    $('li').off('click')
+    $('.box').off('click')
+    turn = 0
   }
 }
 
@@ -116,15 +131,24 @@ const taken = function () {
 }
 
 const reset = function () {
-  $('.reset').click(function () {
+  $('.reset').on('click', function () {
     console.log('hi')
-    $('li').val('')
-    $('li').removeClass('selected')
-    $('li').text('#')
-    // $('li').stop(taken)
+    // $('#id').removeClass('selected')
+    // $('.box').off(taken)
+    // $('.selected').val()
+    // $('.box').text('#')
+    // $('#id').off(taken)
+    // $('.message').text('next turn is...')
+    $('#id li').text('#')
+    $('#id').removeClass('selected')
+    $('#id').removeClass('o')
+    $('#id').removeClass('x')
     turn = 0
-    gameBoard = []
-    /*
+    gameBoard = ['', '', '', '', '', '', '', '', '']
+  }
+  )
+}
+/*
 const reset = function () {
   $('.reset').on('click', function () {
     console.log('hi')
@@ -133,9 +157,21 @@ const reset = function () {
     $('li').removeAttr('x')
     $('li').removeAttr('o')
     // $('li').removeClass('btn-primary')
-    // $('li').removeClass('btn-info') */
+    // $('li').removeClass('btn-info')
+  }
+  )
+}
+*/
+const signIn = () => {
+  $('#in-button').click(function () {
+    $('.gamePage').toggle('slow')
+  })
+}
 
-  } )
+const signOut = () => {
+  $('#out-button').click(function () {
+    $('.gamePage').toggle('slow')
+  })
 }
 
 const gameEvent = () => {
@@ -144,5 +180,7 @@ const gameEvent = () => {
 
 module.exports = {
   gameEvent,
-  reset
+  reset,
+  signIn,
+  signOut
 }
