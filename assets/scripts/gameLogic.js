@@ -15,8 +15,13 @@ const playGame = function () {
   switchPlayer(this.id)
   winner(this.id)
   $(this).addClass('selected')
-  $('.selected').off('click')
-  taken()
+  // $('.selected').off('click')
+  $(this).addClass('disabled')
+  // taken()
+  if ($(this).hasClass('disable'))
+   {
+     console.log('Already selected')
+   }
   console.log(this)
 }
 
@@ -126,12 +131,17 @@ const taken = function () {
     $('.message').text('it\'s already taken')
   })
 }
+/*
+if ($(this).hasClass('disable'))
+ {
+   console.log('Already selected')
 
+*/
 const reset = function () {
   $('.reset').on('click', function () {
     console.log('hi')
     $('.box').removeClass('selected')  // working
-    $('.selected').val()
+    $('.box').removeClass('disabled')
     $('.box').text('#')   // working
     $('.message').text('next turn is...')   // working
     // $('.box').off('click', '.selected', taken)

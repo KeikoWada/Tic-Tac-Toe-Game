@@ -2,22 +2,10 @@
 
 # TOKEN=tokengoeshere TEXT=textgoeshere sh scripts/examples/create.sh
 
-curl "https://aqueous-atoll-85096.herokuapp.com/games" \
+curl "http://tic-tac-toe.wdibos.com/games/" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
-  --header "Authorization: Token token=${TOKEN}>" \
-  --data '{
-    "game": {
-      "id": "",
-      "cells": ["","","","","","","","",""],
-      "over": false,
-      "player_x": {
-        "id": ""
-        "email": ""
-      },
-      "player_o": null
-    }
-  }'
+  --header "Authorization: Token token=${TOKEN}"\
 
 echo
