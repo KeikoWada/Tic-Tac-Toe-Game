@@ -1,2 +1,86 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+
+body {
+  background-color: #a5ffad;
+}
+
+p {
+  text-align: center;
+  font-family: 'Coming Soon', cursive;
+}
+
+.title {
+  text-align: center;
+  font-size: 70px;
+  color: #ff6481;
+  font-weight: bold;
+  font-family: 'Coming Soon', cursive;
+}
+
+.auth {
+  text-align: center;
+}
+
+.gamePage {
+  display: none;
+}
+
+.score-Bord {
+  font-size: 60px;
+  color: gray;
+  font-family: 'Coming Soon', cursive;
+}
+
+.message {
+  text-align: center;
+  font-size: 50px;
+  color: #ab6a32;
+}
+
+.gameBoard {
+  width: 600px;
+  overflow: auto;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+li {
+  float: left;
+  margin: 5px;
+  height: 150px;
+  width: 150px;
+  font-size: 70px;
+  font-family: 'Coming Soon', cursive;
+  background-color: pink;
+  color: brown;
+  list-style: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+li:hover {
+  cursor: pointer;
+  background: yellow;
+}
+
+.selected {
+  background-color: #89fff1;
+}
+
+.reset {
+  border: 0;
+  background-color: #ffee92;
+  color: gray;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 40px;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
