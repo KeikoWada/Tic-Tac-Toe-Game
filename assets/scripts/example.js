@@ -169,8 +169,8 @@ const signIn = () => {
 }
 
 const signOut = () => {
-  $('sign-out').click(function () {
-    $('.gamePage').hide('slow')
+  $('#out-button').click(function () {
+    $('.gamePage').toggle('slow')
   })
 }
 
