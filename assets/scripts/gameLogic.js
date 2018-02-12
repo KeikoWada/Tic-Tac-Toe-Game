@@ -16,23 +16,24 @@ const playGame = function () {
   winner(this.id)
   $(this).addClass('selected')
   // $('.selected').off('click')
-  $(this).addClass('disabled')
-  // taken()
-  if ($(this).hasClass('disable'))
-   {
-     console.log('Already selected')
-   }
+  // $(this).addClass('disabled')
+  taken()
+  // if ($(this).hasClass('disable')) {
+  //  console.log('Already selected')
+//  }
   console.log(this)
 }
 
 // const indexOne = '.one' && indexOne = gameBoard[0]
 function switchPlayer (id) {
   if (turn % 2 === 0) {
+    gameBoard[id] = 'x'
     gameBoard.splice(id, 1, 'x')
     document.getElementById(id).innerHTML = 'x'
     $('.message').text('next turn is you, team O!')
   } else {
     gameBoard.splice(id, 1, 'o')
+    gameBoard[id] = 'o'
     document.getElementById(id).innerHTML = 'o'
     $('.message').text('next turn is you, team X!')
   }
@@ -126,11 +127,42 @@ function winner (id) {
 }
 
 // taken function
-const taken = function () {
-  $('.selected').on('click', function () {
-    $('.message').text('it\'s already taken')
-  })
-}
+// const taken = function () {
+  // $('.selected').on('click', function () {
+  //  $('.message').text('it\'s already taken')
+//  })
+// }
+/*
+  if ($('#0').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+    co
+  } else if
+  ($('#1').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  } else if
+  ($('#2').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  } else if
+  ($('#3').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  } else if
+  ($('#4').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  } else if
+  ($('#5').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  } else if
+  ($('#6').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  }  else if
+  ($('#7').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  } else if
+  ($('#8').text() === 'x' || $('#0').text() === 'o') {
+    console.log('taken')
+  }
+  }
+*/
 /*
 if ($(this).hasClass('disable'))
  {

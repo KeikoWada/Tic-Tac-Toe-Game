@@ -13,10 +13,11 @@ const onCreateGame = function (event) {
     .catch(ui.onCreateFailure)
 }
 
-const createGame = () => {
-  $('#gameBord').on('submit', onCreateGame)
-}
+// const createGame = () => {
+//   $('#gameBord').on('click', onCreateGame)
+// }
 
 module.exports = {
-  createGame
+  onCreateGame
+  // createGame
 }
