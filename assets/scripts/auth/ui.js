@@ -23,6 +23,8 @@ const signUpFailure = function (error) {
 const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
+  $('#gamePage').toggle('slow')
+  $('#first-page').toggle('slow')
   console.log(data)
   store.user = data.user
 }

@@ -6,6 +6,7 @@ const ui = require('./ui')
 
 const onCreateGame = function (event) {
   event.preventDefault()
+  console.log('c')
   const data = getFormFields(event.target)
 
   api.create(data)
@@ -13,11 +14,6 @@ const onCreateGame = function (event) {
     .catch(ui.onCreateFailure)
 }
 
-// const createGame = () => {
-//   $('#gameBord').on('click', onCreateGame)
-// }
-
 module.exports = {
   onCreateGame
-  // createGame
 }

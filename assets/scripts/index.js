@@ -17,7 +17,7 @@ $(() => {
   authEvents.addHandlers()
   gameLogic.gameEvent()
   gameLogic.reset()
-  gameLogic.signIn()
+  // gameLogic.signIn()
   gameLogic.signOut()
 })
 

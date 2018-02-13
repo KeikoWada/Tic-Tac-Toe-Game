@@ -1,4 +1,6 @@
 'use strict'
+const authEvents = require('./auth/events')
+const gameEvents = require('./game/events')
 
 // const playerOne = []
 // const playerTwo = []
@@ -236,12 +238,9 @@ const reset = function () {
   )
 }
 
-const signIn = () => {
-  $('#in-button').click(function () {
-    //  if (('#message').text() === 'Signed in successfully') {
-    $('.gamePage').toggle('slow')
-    $('#first-page').toggle('slow')
-  //  $('#message').text()
+const createGames = () => {
+  $('#createButton').on('click', function () {
+    gameEvents.onCreateGame(event)
   })
 }
 
@@ -260,6 +259,7 @@ const gameEvent = () => {
 module.exports = {
   gameEvent,
   reset,
-  signIn,
-  signOut
+  // signIn,
+  signOut,
+  createGames
 }
