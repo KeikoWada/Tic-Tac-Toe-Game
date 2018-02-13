@@ -17,9 +17,9 @@ const onCreateGame = function (event) {
 
 const onUpdate = function (event) {
   event.preventDefault()
-  console.log(ui.data)
   const data = getFormFields(event.target)
 
+  api.updateGame(data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
   console.log(data)

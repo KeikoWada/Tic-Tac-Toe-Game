@@ -18,7 +18,7 @@ const create = function (data) {
 const updateGame = function (index, value, over) {
   console.log(store, value, over)
   return $.ajax({
-    url: config.apiOrigin + '/games/' + store.game.id,
+    url: config.apiOrigin + '/games/' + store.game,
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
