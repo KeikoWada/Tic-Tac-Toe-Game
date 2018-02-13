@@ -1,11 +1,18 @@
 'use strict'
 const store = require('../store')
+// const signInOut = require('./signinOut')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').css('background-color', 'green')
   console.log(data)
 }
+
+// const signIn = function () {
+//  if ($('#message').text() === 'Signed up successfully') {
+//    console.log('hi')
+//  }
+// }
 
 const signUpFailure = function (error) {
   $('#message').text('Error on signing up')
@@ -16,6 +23,8 @@ const signUpFailure = function (error) {
 const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
+  $('#gamePage').toggle('slow')
+  $('#first-page').toggle('slow')
   console.log(data)
   store.user = data.user
 }
@@ -27,26 +36,26 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function () {
-  $('#message').text('Change password successfully')
-  $('#message').css('background-color', 'green')
+  $('#messageTwo').text('Change password successfully')
+  $('#messageTwo').css('background-color', 'green')
   console.log('change password successfully')
 }
 
 const changePasswordFailure = function (error) {
-  $('#message').text('Error on changing password')
-  $('#message').css('background-color', 'red')
+  $('#messageTwo').text('Error on changing password')
+  $('#messageTwo').css('background-color', 'red')
   console.log(error)
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Signed out successfully')
-  $('#message').css('background-color', 'green')
+  $('#messageTwo').text('Signed out successfully')
+  $('#messageTwo').css('background-color', 'green')
   console.log('signed out successfully')
 }
 
 const signOutFailure = function (error) {
-  $('#message').text('Error on signing out')
-  $('#message').css('background-color', 'red')
+  $('#messageTwo').text('Error on signing out')
+  $('#messageTwo').css('background-color', 'red')
   console.log(error)
 }
 
@@ -59,4 +68,5 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
+  // signIn
 }
