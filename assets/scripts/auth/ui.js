@@ -8,12 +8,6 @@ const signUpSuccess = function (data) {
   console.log(data)
 }
 
-// const signIn = function () {
-//  if ($('#message').text() === 'Signed up successfully') {
-//    console.log('hi')
-//  }
-// }
-
 const signUpFailure = function (error) {
   $('#message').text('Error on signing up')
   $('#message').css('background-color', 'red')

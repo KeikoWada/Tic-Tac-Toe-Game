@@ -16,6 +16,7 @@ $(() => {
   // create a new Games on the server
   authEvents.addHandlers()
   $('#createButton').on('click', gameEvents.onCreateGame)
+  $('.box').on('click', gameEvents.onUpdate)
   gameLogic.gameEvent()
   gameLogic.reset()
   // gameLogic.createGames()

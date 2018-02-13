@@ -17,23 +17,23 @@ const onCreateGame = function (event) {
 
 const onUpdate = function (event) {
   event.preventDefault()
-  console.log('c')
+  console.log(ui.data)
   const data = getFormFields(event.target)
 
-  api.update(data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
-  console.log('workingright')
+  console.log(data)
 }
 
-const Update = () => {
-  $('##in-button').on('click', onCreateGame)
-}
+// const Update = () => {
+//   $('.box').on('click', onCreateGame)
+//   console.log('yup')
+// }
 
 module.exports = {
   onCreateGame,
   // createGame,
-  onUpdate,
-  Update
+  onUpdate
+  // Update
 
 }

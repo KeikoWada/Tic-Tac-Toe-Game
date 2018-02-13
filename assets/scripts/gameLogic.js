@@ -1,7 +1,7 @@
 'use strict'
 // const events = require('../game/events')
 // const authEvents = require('./auth/events')
-const gameEvents = require('./game/events')
+// const gameEvents = require('./game/events')
 
 // const playerOne = []
 // const playerTwo = []
@@ -19,7 +19,6 @@ const playGame = function () {
     switchPlayer(this.id)
     winner(this.id)
     $(this).addClass('selected')
-    console.log(this)
   } else {
     $('.message').text('it\'s taken!')
   }
@@ -39,9 +38,6 @@ function switchPlayer (id) {
     $('.message').text('next turn is you, team X!')
   }
   turn++
-  console.log(gameBoard)
-  console.log(turn)
-  console.log(id)
 }
 
 function winner (id) {
@@ -55,7 +51,6 @@ function winner (id) {
   const eight = $('#7').text()
   const nine = $('#8').text()
 
-  console.log('im here!' + one)
   if (one === x && two === x && three === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.four').text('yes! X')
@@ -244,7 +239,6 @@ function winner (id) {
 
 const reset = function () {
   $('.reset').on('click', function () {
-    console.log('hi')
     $('.box').removeClass('selected')
     $('.box').text('#')
     $('.message').text('next turn is...')
