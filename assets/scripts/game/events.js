@@ -6,6 +6,7 @@ const ui = require('./ui')
 
 const onCreateGame = function (event) {
   event.preventDefault()
+  console.log('c')
   const data = getFormFields(event.target)
 
   api.create(data)
@@ -14,6 +15,7 @@ const onCreateGame = function (event) {
   console.log('workingggggg')
 }
 
+// <<<<<<< HEAD
 const createGame = () => {
   $('##in-button').on('click', onCreateGame)
 }
@@ -21,4 +23,8 @@ const createGame = () => {
 module.exports = {
   onCreateGame,
   createGame
+// =======
+// module.exports = {
+  // onCreateGame
+// >>>>>>> gameapi
 }

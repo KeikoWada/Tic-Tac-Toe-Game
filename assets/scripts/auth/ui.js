@@ -21,8 +21,15 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
+// <<<<<<< HEAD
   $('#messageTwo').text('Signed in successfully')
   $('#messageTwo').css('background-color', 'green')
+  // =======
+  $('#message').text('Signed in successfully')
+  $('#message').css('background-color', 'green')
+  $('#gamePage').toggle('slow')
+  $('#first-page').toggle('slow')
+  // >>>>>>> gameapi
   console.log(data)
   store.user = data.user
 }
@@ -48,6 +55,8 @@ const changePasswordFailure = function (error) {
 const signOutSuccess = function () {
   $('#message').text('Signed out successfully')
   $('#message').css('background-color', 'green')
+  $('.gamePage').toggle('slow')
+  $('#first-page').toggle('slow')
   console.log('signed out successfully')
 }
 
@@ -66,5 +75,4 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
-  // signIn
 }

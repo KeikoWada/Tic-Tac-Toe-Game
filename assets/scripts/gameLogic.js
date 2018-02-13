@@ -1,5 +1,7 @@
 'use strict'
 // const events = require('../game/events')
+// const authEvents = require('./auth/events')
+const gameEvents = require('./game/events')
 
 // const playerOne = []
 // const playerTwo = []
@@ -252,23 +254,9 @@ const reset = function () {
   )
 }
 
-const signIn = () => {
-  // $('#in-button').click(events.onCreateGame)
-  $('#in-button').click(pageShow)
-  console.log('working working')
-}
-
-const pageShow = () => {
-  $('.gamePage').toggle('slow')
-  $('#first-page').toggle('slow')
-  $('#message').text()
-}
-
-const signOut = () => {
-  $('#out-button').click(function () {
-    $('.gamePage').toggle('slow')
-    $('#first-page').toggle('slow')
-    $('.gamePage').text()
+const createGames = () => {
+  $('#createButton').on('click', function () {
+    gameEvents.onCreateGame(event)
   })
 }
 
@@ -279,6 +267,5 @@ const gameEvent = () => {
 module.exports = {
   gameEvent,
   reset,
-  signIn,
-  signOut
+  createGames
 }
