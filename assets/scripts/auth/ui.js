@@ -1,11 +1,18 @@
 'use strict'
 const store = require('../store')
+// const signInOut = require('./signinOut')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').css('background-color', 'green')
   console.log(data)
 }
+
+// const signIn = function () {
+//  if ($('#message').text() === 'Signed up successfully') {
+//    console.log('hi')
+//  }
+// }
 
 const signUpFailure = function (error) {
   $('#message').text('Error on signing up')
@@ -59,4 +66,5 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
+  // signIn
 }

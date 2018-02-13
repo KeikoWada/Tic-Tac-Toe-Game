@@ -24,12 +24,14 @@ const updateGame = function (index, value, over) {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
     },
-    'game': {
-      'cell': {
-        'index': index,
-        'value': value
-      },
-      'over': over
+    data: {
+      'game': {
+        'cell': {
+          'index': index,
+          'value': value
+        },
+        'over': over
+      }
     }
   })
 }

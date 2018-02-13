@@ -1,6 +1,5 @@
 'use strict'
 
-
 const signIn = () => {
   $('#in-button').click(function () {
     $('.gamePage').toggle('slow')
@@ -15,4 +14,9 @@ const signOut = () => {
     $('#first-page').toggle('slow')
     $('.gamePage').text()
   })
+}
+
+module.exports = {
+  signIn,
+  signOut
 }
