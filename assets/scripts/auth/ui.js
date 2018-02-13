@@ -68,5 +68,4 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
-  // signIn
 }
