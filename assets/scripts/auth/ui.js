@@ -21,8 +21,8 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
-  $('#message').css('background-color', 'green')
+  $('#messageTwo').text('Signed in successfully')
+  $('#messageTwo').css('background-color', 'green')
   console.log(data)
   store.user = data.user
 }
@@ -46,8 +46,8 @@ const changePasswordFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  $('#messageTwo').text('Signed out successfully')
-  $('#messageTwo').css('background-color', 'green')
+  $('#message').text('Signed out successfully')
+  $('#message').css('background-color', 'green')
   console.log('signed out successfully')
 }
 
