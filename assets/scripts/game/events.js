@@ -15,16 +15,25 @@ const onCreateGame = function (event) {
   console.log('workingggggg')
 }
 
-// <<<<<<< HEAD
-const createGame = () => {
+const onUpdate = function (event) {
+  event.preventDefault()
+  console.log('c')
+  const data = getFormFields(event.target)
+
+  api.update(data)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onUpdateFailure)
+  console.log('workingright')
+}
+
+const Update = () => {
   $('##in-button').on('click', onCreateGame)
 }
 
 module.exports = {
   onCreateGame,
-  createGame
-// =======
-// module.exports = {
-  // onCreateGame
-// >>>>>>> gameapi
+  // createGame,
+  onUpdate,
+  Update
+
 }

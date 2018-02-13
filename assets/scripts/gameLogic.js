@@ -254,11 +254,9 @@ const reset = function () {
   )
 }
 
-const createGames = () => {
-  $('#createButton').on('click', function () {
-    gameEvents.onCreateGame(event)
-  })
-}
+// const createGames = () => {
+//   $('#createButton').on('click', gameEvents.onCreateGame)
+// }
 
 const gameEvent = () => {
   $('.box').on('click', playGame)
@@ -266,6 +264,6 @@ const gameEvent = () => {
 
 module.exports = {
   gameEvent,
-  reset,
-  createGames
+  reset
+  // createGames
 }

@@ -21,15 +21,12 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-// <<<<<<< HEAD
   $('#messageTwo').text('Signed in successfully')
   $('#messageTwo').css('background-color', 'green')
-  // =======
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
   $('#gamePage').toggle('slow')
   $('#first-page').toggle('slow')
-  // >>>>>>> gameapi
   console.log(data)
   store.user = data.user
 }
