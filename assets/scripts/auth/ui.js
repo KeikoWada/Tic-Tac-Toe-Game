@@ -8,12 +8,6 @@ const signUpSuccess = function (data) {
   console.log(data)
 }
 
-// const signIn = function () {
-//  if ($('#message').text() === 'Signed up successfully') {
-//    console.log('hi')
-//  }
-// }
-
 const signUpFailure = function (error) {
   $('#message').text('Error on signing up')
   $('#message').css('background-color', 'red')
@@ -21,6 +15,8 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
+  $('#messageTwo').text('Signed in successfully')
+  $('#messageTwo').css('background-color', 'green')
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
   $('#gamePage').toggle('slow')
@@ -48,8 +44,10 @@ const changePasswordFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  $('#messageTwo').text('Signed out successfully')
-  $('#messageTwo').css('background-color', 'green')
+  $('#message').text('Signed out successfully')
+  $('#message').css('background-color', 'green')
+  $('.gamePage').toggle('slow')
+  $('#first-page').toggle('slow')
   console.log('signed out successfully')
 }
 
@@ -68,5 +66,4 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
-  // signIn
 }

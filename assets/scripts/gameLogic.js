@@ -1,6 +1,7 @@
 'use strict'
-const authEvents = require('./auth/events')
-const gameEvents = require('./game/events')
+// const events = require('../game/events')
+// const authEvents = require('./auth/events')
+// const gameEvents = require('./game/events')
 
 // const playerOne = []
 // const playerTwo = []
@@ -18,7 +19,6 @@ const playGame = function () {
     switchPlayer(this.id)
     winner(this.id)
     $(this).addClass('selected')
-    console.log(this)
   } else {
     $('.message').text('it\'s taken!')
   }
@@ -38,9 +38,6 @@ function switchPlayer (id) {
     $('.message').text('next turn is you, team X!')
   }
   turn++
-  console.log(gameBoard)
-  console.log(turn)
-  console.log(id)
 }
 
 function winner (id) {
@@ -54,7 +51,6 @@ function winner (id) {
   const eight = $('#7').text()
   const nine = $('#8').text()
 
-  console.log('im here!' + one)
   if (one === x && two === x && three === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.four').text('yes! X')
@@ -62,10 +58,10 @@ function winner (id) {
     $('.six').text('yes! X')
     $('.seven').text('yes! X')
     $('.eight').text('yes! X')
-    $('.nine').text('yes! X')
+    $('.nine').append('yes! X')
     // $('.box').off('click')
     turn = 0
-    // document.getElementById('.box').innerHTML('.box').style.display = 'block'
+    $('.number-win').text('|')
   } else if (four === x && five === x && six === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     turn = 0
@@ -75,6 +71,7 @@ function winner (id) {
     $('.seven').text('yes! X')
     $('.eight').text('yes! X')
     $('.nine').text('yes! X')
+    $('.number-win').text('|')
     // $('.box').off('click')
   } else if (seven === x && eight === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
@@ -84,6 +81,7 @@ function winner (id) {
     $('.four').text('yes! X')
     $('.five').text('yes! X')
     $('.six').text('yes! X')
+    $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (one === x && five === x && nine === x) {
@@ -94,6 +92,7 @@ function winner (id) {
     $('.four').text('yes! X')
     $('.eight').text('yes! X')
     $('.six').text('yes! X')
+    $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (three === x && five === x && seven === x) {
@@ -104,6 +103,7 @@ function winner (id) {
     $('.four').text('yes! X')
     $('.nine').text('yes! X')
     $('.six').text('yes! X')
+    $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (one === x && four === x && seven === x) {
@@ -114,6 +114,7 @@ function winner (id) {
     $('.eight').text('yes! X')
     $('.nine').text('yes! X')
     $('.six').text('yes! X')
+    $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (two === x && five === x && eight === x) {
@@ -124,6 +125,7 @@ function winner (id) {
     $('.six').text('yes! X')
     $('.seven').text('yes! X')
     $('.nine').text('yes! X')
+    $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (three === x && six === x && nine === x) {
@@ -134,6 +136,7 @@ function winner (id) {
     $('.seven').text('yes! X')
     $('.five').text('yes! X')
     $('.eight').text('yes! X')
+    $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (one === o && two === o && three === o) {
@@ -144,6 +147,7 @@ function winner (id) {
     $('.four').text('yes! O')
     $('.five').text('yes! O')
     $('.six').text('yes! O')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (four === o && five === o && six === o) {
@@ -154,6 +158,7 @@ function winner (id) {
     $('.seven').text('yes! O')
     $('.eight').text('yes! O')
     $('.nine').text('yes! O')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (seven === o && eight === o && nine === o) {
@@ -164,6 +169,7 @@ function winner (id) {
     $('.four').text('yes! O')
     $('.five').text('yes! O')
     $('.six').text('yes! O')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (one === o && five === o && nine === o) {
@@ -174,6 +180,7 @@ function winner (id) {
     $('.four').text('yes! O')
     $('.eight').text('yes! O')
     $('.six').text('yes! O')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (three === o && five === o && seven === o) {
@@ -184,6 +191,7 @@ function winner (id) {
     $('.four').text('yes! O')
     $('.nine').text('yes! O')
     $('.six').text('yes! O')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (one === o && four === o && seven === o) {
@@ -195,6 +203,7 @@ function winner (id) {
     $('.eight').text('yes! O')
     $('.nine').text('yes! O')
     $('.six').text('yes! O')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (two === o && five === o && eight === o) {
@@ -205,6 +214,7 @@ function winner (id) {
     $('.six').text('yes! X')
     $('.seven').text('yes! X')
     $('.nine').text('yes! X')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (three === o && six === o && nine === o) {
@@ -215,6 +225,7 @@ function winner (id) {
     $('.seven').text('yes! X')
     $('.five').text('yes! X')
     $('.eight').text('yes! X')
+    $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
   } else if (turn === 9) {
@@ -228,7 +239,6 @@ function winner (id) {
 
 const reset = function () {
   $('.reset').on('click', function () {
-    console.log('hi')
     $('.box').removeClass('selected')
     $('.box').text('#')
     $('.message').text('next turn is...')
@@ -238,19 +248,9 @@ const reset = function () {
   )
 }
 
-const createGames = () => {
-  $('#createButton').on('click', function () {
-    gameEvents.onCreateGame(event)
-  })
-}
-
-const signOut = () => {
-  $('#out-button').click(function () {
-    $('.gamePage').toggle('slow')
-    $('#first-page').toggle('slow')
-    $('.gamePage').text()
-  })
-}
+// const createGames = () => {
+//   $('#createButton').on('click', gameEvents.onCreateGame)
+// }
 
 const gameEvent = () => {
   $('.box').on('click', playGame)
@@ -258,8 +258,6 @@ const gameEvent = () => {
 
 module.exports = {
   gameEvent,
-  reset,
-  // signIn,
-  signOut,
-  createGames
+  reset
+  // createGames
 }

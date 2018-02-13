@@ -5,7 +5,7 @@
 
 
 
-  curl --include --request PATCH "http://tic-tac-toe.wdibos.com/games/${ID}" \
+  curl --include --request PATCH " https://aqueous-atoll-85096.herokuapp.com/games/${ID}" \
     --header "Content-Type: application/json" \
     --header "Authorization: Token token=${TOKEN}" \
     --data '{
@@ -14,7 +14,7 @@
           "index": "0",
           "value": "x"
         },
-        "over": "FAULSE"
+        "over": "FALSE"
       }
     }'
 
