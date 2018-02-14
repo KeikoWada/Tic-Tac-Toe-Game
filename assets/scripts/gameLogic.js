@@ -28,16 +28,20 @@ const playGame = function () {
 function switchPlayer (id) {
   if (turn % 2 === 0) {
     gameBoard[id] = 'x'
+    // const playerIcon = (gameBoard[id])
     gameBoard.splice(id, 1, 'x')
     document.getElementById(id).innerHTML = 'x'
     $('.message').text('next turn is you, team O!')
   } else {
     gameBoard.splice(id, 1, 'o')
     gameBoard[id] = 'o'
+    // const playerIcon = (gameBoard[id])
     document.getElementById(id).innerHTML = 'o'
     $('.message').text('next turn is you, team X!')
   }
   turn++
+  console.log(gameBoard[id])
+  const playerIcon = gameBoard[id]
 }
 
 function winner (id) {
@@ -258,6 +262,7 @@ const gameEvent = () => {
 
 module.exports = {
   gameEvent,
-  reset
+  reset,
+  playerIcon
   // createGames
 }
