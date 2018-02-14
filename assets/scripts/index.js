@@ -17,9 +17,9 @@ $(() => {
   authEvents.addHandlers()
   $('#createButton').on('click', gameEvents.onCreateGame)
   $('.box').on('click', gameEvents.onUpdate)
+  $('#gameTraker').on('click', gameEvents.onTrack)
   gameLogic.gameEvent()
   gameLogic.reset()
-  // gameLogic.createGames()
 })
 
 // use require with a reference to bundle the file and use it in this file

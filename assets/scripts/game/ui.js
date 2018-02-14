@@ -2,8 +2,8 @@
 const store = require('../store')
 
 const onCreateSuccess = function (data) {
-  $('#messageTwo').text('game successfully created')
-  $('#messageTwo').css('background-color', 'green')
+  $('#checkmessage').text('game successfully created')
+  $('#checkmessage').css('background-color', 'green')
 
   // console.log('successfully created an game')
   console.log(data)
@@ -11,37 +11,37 @@ const onCreateSuccess = function (data) {
 }
 
 const onCreateFailure = function (error) {
-  $('#message').text('Error on create of game')
-  $('#message').css('background-color', 'red')
+  $('#checkmessage').text('Error on create of game')
+  $('#checkmessage').css('background-color', 'red')
   console.error(error)
 }
 
 const onUpdate = function (data) {
-  $('#messageTwo').text('game successfully updated')
-  $('#messageTwo').css('background-color', 'green')
+  $('#checkmessage').text('game successfully updated')
+  $('#checkmessage').css('background-color', 'green')
 
   // console.log('successfully created an game')
   store.game = data.game
 }
 
 const onUpdateFailure = function (error) {
-  $('#message').text('Error on updating the game')
-  $('#message').css('background-color', 'red')
+  $('#checkmessage').text('Error on updating the game')
+  $('#checkmessage').css('background-color', 'red')
   console.error(error)
 }
 
-const onCountSuccess = function (data) {
-  $('#messageTwo').text('Winner successfully updated')
-  $('#messageTwo').css('background-color', 'green')
+const onTrackSuccess = function (data) {
+  $('#checkmessage').text('Winner successfully updated')
+  $('#checkmessage').css('background-color', 'green')
 
   // console.log('successfully created an game')
   console.log(data)
   store.game = data.game
 }
 
-const onCountFailure = function (error) {
-  $('#message').text('Error on updating the Winner')
-  $('#message').css('background-color', 'red')
+const onTrackFailure = function (error) {
+  $('#checkmessage').text('Error on updating the Winner')
+  $('#checkmessage').css('background-color', 'red')
   console.error(error)
 }
 
@@ -50,6 +50,6 @@ module.exports = {
   onCreateFailure,
   onUpdate,
   onUpdateFailure,
-  onCountSuccess,
-  onCountFailure
+  onTrackSuccess,
+  onTrackFailure
 }

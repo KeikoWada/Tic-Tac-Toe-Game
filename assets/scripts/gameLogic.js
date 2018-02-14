@@ -1,5 +1,5 @@
 'use strict'
-// const events = require('../game/events')
+
 // const authEvents = require('./auth/events')
 // const gameEvents = require('./game/events')
 
@@ -24,27 +24,24 @@ const playGame = function () {
   }
 }
 
-// const indexOne = '.one' && indexOne = gameBoard[0]
 function switchPlayer (id) {
   if (turn % 2 === 0) {
     gameBoard[id] = 'x'
-    // const playerIcon = (gameBoard[id])
-    gameBoard.splice(id, 1, 'x')
+    // const playerIcon = gameBoard[id]
+    // gameBoard.splice(id, 1, 'x')
     document.getElementById(id).innerHTML = 'x'
     $('.message').text('next turn is you, team O!')
   } else {
-    gameBoard.splice(id, 1, 'o')
+    // gameBoard.splice(id, 1, 'o')
     gameBoard[id] = 'o'
     // const playerIcon = (gameBoard[id])
     document.getElementById(id).innerHTML = 'o'
     $('.message').text('next turn is you, team X!')
   }
   turn++
-  console.log(gameBoard[id])
-  const playerIcon = gameBoard[id]
 }
 
-function winner (id) {
+const winner = function (id) {
   const one = $('#0').text()
   const two = $('#1').text()
   const three = $('#2').text()
@@ -54,6 +51,7 @@ function winner (id) {
   const seven = $('#6').text()
   const eight = $('#7').text()
   const nine = $('#8').text()
+  let gameOver = true
 
   if (one === x && two === x && three === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
@@ -66,6 +64,7 @@ function winner (id) {
     // $('.box').off('click')
     turn = 0
     $('.number-win').text('|')
+    gameOver = true
   } else if (four === x && five === x && six === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     turn = 0
@@ -76,6 +75,7 @@ function winner (id) {
     $('.eight').text('yes! X')
     $('.nine').text('yes! X')
     $('.number-win').text('|')
+    gameOver = true
     // $('.box').off('click')
   } else if (seven === x && eight === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
@@ -87,6 +87,7 @@ function winner (id) {
     $('.six').text('yes! X')
     $('.number-win').text('|')
     // $('.box').off('click')
+    gameOver = true
     turn = 0
   } else if (one === x && five === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
@@ -98,6 +99,7 @@ function winner (id) {
     $('.six').text('yes! X')
     $('.number-win').text('|')
     // $('.box').off('click')
+    gameOver = true
     turn = 0
   } else if (three === x && five === x && seven === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
@@ -110,6 +112,7 @@ function winner (id) {
     $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (one === x && four === x && seven === x) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.five').text('yes! X')
@@ -121,6 +124,7 @@ function winner (id) {
     $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (two === x && five === x && eight === x) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! X')
@@ -132,6 +136,7 @@ function winner (id) {
     $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (three === x && six === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! X')
@@ -143,6 +148,7 @@ function winner (id) {
     $('.number-win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (one === o && two === o && three === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
     $('.seven').text('yes! O')
@@ -154,6 +160,7 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (four === o && five === o && six === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -165,6 +172,7 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (seven === o && eight === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
     $('.one').text('yes! O')
@@ -176,6 +184,7 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (one === o && five === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.seven').text('yes! O')
@@ -187,6 +196,7 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (three === o && five === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -198,6 +208,7 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (one === o && four === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
@@ -210,6 +221,7 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (two === o && five === o && eight === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! X')
@@ -221,6 +233,7 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (three === o && six === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! X')
@@ -232,13 +245,16 @@ function winner (id) {
     $('#o_win').text('|')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else if (turn === 9) {
     $('.message').text('Tie!')
     // $('.box').off('click')
     turn = 0
+    gameOver = true
   } else {
 
   }
+  return gameOver
 }
 
 const reset = function () {
@@ -262,7 +278,5 @@ const gameEvent = () => {
 
 module.exports = {
   gameEvent,
-  reset,
-  playerIcon
-  // createGames
+  reset
 }

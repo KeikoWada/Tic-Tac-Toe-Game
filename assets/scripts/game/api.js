@@ -15,31 +15,10 @@ const create = function (data) {
   })
 }
 
-const updateGame = function (data) {
-  // console.log(data)
+const updateGame = function (index, value, over) {
+  console.log('hi')
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
-    method: 'PATCH',
-    headers: {
-      contentType: 'application/json',
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: {
-      'game': {
-        'cell': {
-          'index': data.index,
-          'value': data.value
-        },
-        'over': data.over
-      }
-    }
-  })
-}
-
-const tracker = function (index, value, over) {
-  console.log(store, value, over)
-  return $.ajax({
-    url: config.apiOrigin + '/games/' + store.game,
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
@@ -51,8 +30,20 @@ const tracker = function (index, value, over) {
           'index': index,
           'value': value
         },
-        'over': over
+        'over': over // data.over
       }
+    }
+  })
+}
+
+const tracker = function () {
+  console.log('hiiii')
+  return $.ajax({
+    url: config.apiOrigin + '/games/',
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
