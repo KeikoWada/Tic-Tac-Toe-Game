@@ -3,6 +3,7 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const gameLogic = require('../gameLogic')
 
 const onCreateGame = function (event) {
   event.preventDefault()
@@ -17,9 +18,17 @@ const onCreateGame = function (event) {
 
 const onUpdate = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const data = {
+    id: event.target.id,
+    value: gameLogic.playerIcon   // store.player.id
+    over:
+  }
+  // store.player.id
+  // store.data = game.data
+  // data.store
+  console.log(event.target.id)
 
-  api.updateGame(data)
+  api.updateGame(event)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
   console.log(data)
@@ -33,7 +42,7 @@ const onUpdate = function (event) {
 module.exports = {
   onCreateGame,
   // createGame,
-  onUpdate
+  //             onUpdate
   // Update
-
+  onUpdate
 }

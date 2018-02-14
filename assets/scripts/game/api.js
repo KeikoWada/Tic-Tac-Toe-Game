@@ -15,10 +15,10 @@ const create = function (data) {
   })
 }
 
-const updateGame = function (index, value, over) {
-  console.log(store, value, over)
+const updateGame = function (data) {
+  // console.log(data)
   return $.ajax({
-    url: config.apiOrigin + '/games/' + store.game,
+    url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
@@ -27,10 +27,10 @@ const updateGame = function (index, value, over) {
     data: {
       'game': {
         'cell': {
-          'index': index,
-          'value': value
+          'index': data.index,
+          'value': data.value
         },
-        'over': over
+        'over': data.over
       }
     }
   })
