@@ -15,8 +15,8 @@ const create = function (data) {
   })
 }
 
-const updateGame = function (index, value, over) {
-  console.log('hi')
+const updateGame = function (data) {
+  console.log('hiiii')
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
@@ -27,17 +27,16 @@ const updateGame = function (index, value, over) {
     data: {
       'game': {
         'cell': {
-          'index': index,
-          'value': value
+          'index': data.index,
+          'value': data.value
         },
-        'over': over // data.over
+        'over': data.over // data.over
       }
     }
   })
 }
 
 const tracker = function () {
-  console.log('hiiii')
   return $.ajax({
     url: config.apiOrigin + '/games/',
     method: 'GET',

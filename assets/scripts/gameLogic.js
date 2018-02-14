@@ -8,6 +8,7 @@
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 const x = 'x'
 const o = 'o'
+let gameOver = false
 
 // here is the switchPlayer -> after click, the icon shows up
 // changing the icon when switch players -> icon will push into the array
@@ -51,7 +52,6 @@ const winner = function (id) {
   const seven = $('#6').text()
   const eight = $('#7').text()
   const nine = $('#8').text()
-  let gameOver = true
 
   if (one === x && two === x && three === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')

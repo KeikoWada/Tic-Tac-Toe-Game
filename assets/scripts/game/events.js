@@ -8,28 +8,31 @@ const store = require('../store')
 
 const onCreateGame = function (event) {
   event.preventDefault()
-  console.log('c')
   const data = getFormFields(event.target)
 
   api.create(data)
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
-  console.log('workingggggg')
 }
 
 const onUpdate = function (event) {
+  console.log('yes')
   // event.preventDefault()
   const data = {
     id: event.target.id,
-    value: store.player,
-    over: gameLogic.gameBoard
+    value: store.game.id,
+    over: store.game.over
   }
-  console.log(event.target.id)
+  console.log('haha')
+  console.log(event)
+  console.log(store.game.id)
+  console.log(store.game.over)
 
-  api.updateGame(event)
+  api.updateGame(data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
   console.log(data)
+  console.log('111')
 }
 
 const onTrack = function (event) {

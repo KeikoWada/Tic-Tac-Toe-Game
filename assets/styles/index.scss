@@ -12,6 +12,31 @@ p {
   font-family: 'Coming Soon', cursive;
 }
 
+li {
+  float: left;
+  margin: 5px;
+  height: 150px;
+  width: 150px;
+  font-size: 70px;
+  font-family: 'Coming Soon', cursive;
+  background-color: pink;
+  color: brown;
+  list-style: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+li:hover {
+  cursor: pointer;
+  background: yellow;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
 .title {
   text-align: center;
   font-size: 70px;
@@ -34,36 +59,11 @@ p {
   font-family: 'Coming Soon', cursive;
 }
 
-.message {
-  text-align: center;
-  font-size: 50px;
-  color: #ab6a32;
-}
-
 .gameBoard {
   width: 600px;
   overflow: auto;
   margin: 40px auto;
   border-radius: 10px;
-}
-
-li {
-  float: left;
-  margin: 5px;
-  height: 150px;
-  width: 150px;
-  font-size: 70px;
-  font-family: 'Coming Soon', cursive;
-  background-color: pink;
-  color: brown;
-  list-style: none;
-  text-align: center;
-  border-radius: 5px;
-}
-
-li:hover {
-  cursor: pointer;
-  background: yellow;
 }
 
 .selected {
@@ -79,8 +79,19 @@ li:hover {
   font-size: 40px;
 }
 
-footer {
-  display: block;
+#checkmessage {
+  color: white;
+  font-size: 40px;
+}
+
+#message {
   text-align: center;
-  padding-top: 20px;
+  font-size: 40px;
+  color: white;
+}
+
+#messageTwo {
+  text-align: center;
+  font-size: 40px;
+  color: white;
 }
