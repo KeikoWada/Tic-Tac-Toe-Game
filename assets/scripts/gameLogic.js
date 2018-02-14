@@ -188,22 +188,22 @@ const winner = function (id) {
     turn = 0
   } else if (two === o && five === o && eight === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('.one').text('yes! X')
-    $('.three').text('yes! X')
-    $('.four').text('yes! X')
-    $('.six').text('yes! X')
-    $('.seven').text('yes! X')
-    $('.nine').text('yes! X')
+    $('.one').text('yes! O')
+    $('.three').text('yes! O')
+    $('.four').text('yes! O')
+    $('.six').text('yes! O')
+    $('.seven').text('yes! O')
+    $('.nine').text('yes! O')
     $('#o_win').append('|')
     turn = 0
   } else if (three === o && six === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
-    $('.one').text('yes! X')
-    $('.two').text('yes! X')
-    $('.four').text('yes! X')
-    $('.seven').text('yes! X')
-    $('.five').text('yes! X')
-    $('.eight').text('yes! X')
+    $('.one').text('yes! O')
+    $('.two').text('yes! O')
+    $('.four').text('yes! O')
+    $('.seven').text('yes! O')
+    $('.five').text('yes! O')
+    $('.eight').text('yes! O')
     $('#o_win').append('|')
     turn = 0
   } else if (turn === 9) {
