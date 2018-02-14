@@ -20,7 +20,6 @@ const onUpdate = function (data) {
   $('#checkmessage').text('game successfully updated')
   $('#checkmessage').css('background-color', 'green')
 
-  // console.log('successfully created an game')
   store.game = data.game
 }
 

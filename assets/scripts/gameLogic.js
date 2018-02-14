@@ -1,10 +1,5 @@
 'use strict'
 
-// const authEvents = require('./auth/events')
-// const gameEvents = require('./game/events')
-
-// const playerOne = []
-// const playerTwo = []
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 const x = 'x'
 const o = 'o'
@@ -12,8 +7,6 @@ let gameOver = false
 
 // here is the switchPlayer -> after click, the icon shows up
 // changing the icon when switch players -> icon will push into the array
-// let countx = 0
-// let counto = 0
 let turn = 0
 const playGame = function () {
   if (($(this).text() === '#') || ($(this).text() === '.selected')) {
@@ -28,14 +21,12 @@ const playGame = function () {
 function switchPlayer (id) {
   if (turn % 2 === 0) {
     gameBoard[id] = 'x'
-    // const playerIcon = gameBoard[id]
     // gameBoard.splice(id, 1, 'x')
     document.getElementById(id).innerHTML = 'x'
     $('.message').text('next turn is you, team O!')
   } else {
     // gameBoard.splice(id, 1, 'o')
     gameBoard[id] = 'o'
-    // const playerIcon = (gameBoard[id])
     document.getElementById(id).innerHTML = 'o'
     $('.message').text('next turn is you, team X!')
   }
@@ -267,10 +258,6 @@ const reset = function () {
   }
   )
 }
-
-// const createGames = () => {
-//   $('#createButton').on('click', gameEvents.onCreateGame)
-// }
 
 const gameEvent = () => {
   $('.box').on('click', playGame)
