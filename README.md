@@ -22,7 +22,6 @@ Document your planning
 Then start writing the code.
 
 List unsolved problems which would be fixed in future iterations.
-still working on API to do record each icon that user make (PATCH) and keep tracking the record of the winning (GET)
 
 Link to wireframes and user stories.
 https://i.imgur.com/9O36g7a.jpg
