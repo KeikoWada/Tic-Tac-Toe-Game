@@ -14,6 +14,14 @@ const onCreateGame = function (event) {
     .catch(ui.onCreateFailure)
 }
 
+const onCreateNewGame = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+
+  api.create(data)
+    .then(ui.onCreateNewSuccess)
+}
+
 const onUpdate = function (event) {
   event.preventDefault()
   const data = {
@@ -37,5 +45,6 @@ const onTrack = function (event) {
 module.exports = {
   onCreateGame,
   onUpdate,
-  onTrack
+  onTrack,
+  onCreateNewGame
 }

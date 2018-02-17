@@ -215,15 +215,15 @@ const winner = function (id) {
 }
 
 const reset = function () {
-  $('.reset').on('click', function () {
-    $('.box').removeClass('selected')
-    $('.box').text('#')
-    $('.message').text('next turn is...')
-    turn = 0
-    gameBoard = ['', '', '', '', '', '', '', '', '']
-  }
-  )
+  // $('.restart').on('click', function () {
+  $('.box').removeClass('selected')
+  $('.box').text('#')
+  $('.message').text('next turn is...')
+  turn = 0
+  gameBoard = ['', '', '', '', '', '', '', '', '']
 }
+//  )
+// }
 
 const gameEvent = () => {
   $('.box').on('click', playGame)

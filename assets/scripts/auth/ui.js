@@ -2,45 +2,42 @@
 const store = require('../store')
 // const signInOut = require('./signinOut')
 
-const signUpSuccess = function (data) {
+const signUpSuccess = function () {
+  $('input').val('')
   $('#message').text('Signed up successfully')
   $('#message').css('background-color', 'green')
-  console.log(data)
 }
 
-const signUpFailure = function (error) {
+const signUpFailure = function () {
   $('#message').text('Error on signing up')
   $('#message').css('background-color', 'red')
-  console.log(error)
 }
 
 const signInSuccess = function (data) {
+  $('input').val('')
   $('#messageTwo').text('Signed in successfully')
   $('#messageTwo').css('background-color', 'green')
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
-  $('#gamePage').toggle('slow')
+  $('.secondPage').toggle('slow')
   $('#first-page').toggle('slow')
-  console.log(data)
   store.user = data.user
 }
 
-const signInFailure = function (error) {
+const signInFailure = function () {
   $('#message').text('Error in signing up')
   $('#message').css('background-color', 'red')
-  console.log(error)
 }
 
 const changePasswordSuccess = function () {
+  $('input').val('')
   $('#messageTwo').text('Change password successfully')
   $('#messageTwo').css('background-color', 'green')
-  console.log('change password successfully')
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = function () {
   $('#messageTwo').text('Error on changing password')
   $('#messageTwo').css('background-color', 'red')
-  console.log(error)
 }
 
 const signOutSuccess = function () {
@@ -48,13 +45,11 @@ const signOutSuccess = function () {
   $('#message').css('background-color', 'green')
   $('.gamePage').toggle('slow')
   $('#first-page').toggle('slow')
-  console.log('signed out successfully')
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = function () {
   $('#messageTwo').text('Error on signing out')
   $('#messageTwo').css('background-color', 'red')
-  console.log(error)
 }
 
 module.exports = {

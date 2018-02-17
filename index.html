@@ -22,7 +22,7 @@
             <legend>Sign up!</legend>
             <input type="text" name="credentials[email]" placeholder="Email">
             <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" value="Sign up!">
+            <button type="submit" value="Sign up!">Sign up!</button>
         </fieldset>
         </form>
 
@@ -36,6 +36,12 @@
         </form>
       </div>
 
+        <div class="secondPage">
+          <h1 class="menue">Welcome to the tic tac toe!</h1>
+            <button class="newGame">Play New Game</button>
+            <button class="recprd">Record</button>
+        </div>
+
         <div id="gamePage" class="gamePage">
           <h1 class="title">Tic Tac Toe Game!</h1>
           <p class="intro">Tic-tac-toe is a simple & FUN game for two players, X and O <br> who take turns marking the spaces in a 3×3 grid.<br> The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. </p>
@@ -45,7 +51,7 @@
             <legend>Change Password?</legend>
             <input type="password" name="passwords[old]" placeholder="Old Password">
             <input type="password" name="passwords[new]" placeholder="New Password">
-            <input type="submit" value="Change Password">
+            <button type="submit" value="Change Password">Change Password?</button>
           </fieldset>
           </form>
 
@@ -80,12 +86,9 @@
              <li id="7" class="box eight">#</li>
              <li id="8" class="box nine">#</li>
             </ul>
-            <button id="createButton">create Game!</button>
-            <button id="gameTraker">Game Tracker!</button>
-            <p id="checkmessage"></p>
          </div>
          <footer>
-           <input class="btn btn-primary reset" type="reset" value="New Game">
+           <button id="restart">Play Again!</button>
          </footer>
          </div>
       </body>

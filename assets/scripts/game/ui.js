@@ -1,54 +1,51 @@
 'use strict'
 const store = require('../store')
+const gameLogic = require('../gameLogic')
 
 const onCreateSuccess = function (data) {
-  $('#checkmessage').text('game successfully created')
-  $('#checkmessage').css('background-color', 'green')
-
-  // console.log('successfully created an game')
-  console.log(data)
+  $('#gamePage').toggle('slow')
   store.game = data.game
 }
 
-const onCreateFailure = function (error) {
-  $('#checkmessage').text('Error on create of game')
-  $('#checkmessage').css('background-color', 'red')
-  console.error(error)
+// const onCreateFailure = function () {
+//   $('#checkmessage').text('Error on create of game')
+//   $('#checkmessage').css('background-color', 'red')
+// }
+
+const onCreateNewSuccess = function (data) {
+  gameLogic.reset()
+  store.game = data.game
+  console.log(store.game)
 }
 
 const onUpdate = function (data) {
   $('#checkmessage').text('game successfully updated')
   $('#checkmessage').css('background-color', 'green')
-
   store.game = data.game
 }
 
-const onUpdateFailure = function (error) {
-  $('#checkmessage').text('Error on updating the game')
-  $('#checkmessage').css('background-color', 'red')
-  console.error(error)
-}
+// const onUpdateFailure = function () {
+//   $('#checkmessage').text('Error on updating the game')
+//   $('#checkmessage').css('background-color', 'red')
+// }
 
 const onTrackSuccess = function (data) {
   $('#checkmessage').text('Winner successfully updated')
   $('#checkmessage').css('background-color', 'green')
-
-  // console.log('successfully created an game')
-  console.log(data)
   store.game = data.game
 }
 
-const onTrackFailure = function (error) {
-  $('#checkmessage').text('Error on updating the Winner')
-  $('#checkmessage').css('background-color', 'red')
-  console.error(error)
-}
+// const onTrackFailure = function () {
+//   $('#checkmessage').text('Error on updating the Winner')
+//   $('#checkmessage').css('background-color', 'red')
+// }
 
 module.exports = {
   onCreateSuccess,
-  onCreateFailure,
+  // onCreateFailure,
   onUpdate,
-  onUpdateFailure,
+  // onUpdateFailure,
   onTrackSuccess,
-  onTrackFailure
+  // onTrackFailure,
+  onCreateNewSuccess
 }
