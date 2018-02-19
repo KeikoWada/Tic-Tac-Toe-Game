@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
 const gameEvents = require('./game/events.js')
+const ui = require('./game/ui.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -20,10 +21,11 @@ $(() => {
   // })
   $('.newGame').on('click', gameEvents.onCreateGame)
   $('.box').on('click', gameEvents.onUpdate)
-  $('#gameTraker').on('click', gameEvents.onTrack)
+  // $('#gameTraker').on('click', gameEvents.onTrack)
   gameLogic.gameEvent()
   // $('.restart').on('click', gameLogic.reset)
   $('#restart').on('click', gameEvents.onCreateNewGame)
+  $('#back').on('click', ui.menuPage)
 })
 
 // use require with a reference to bundle the file and use it in this file

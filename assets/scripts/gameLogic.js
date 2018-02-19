@@ -1,4 +1,5 @@
 'use strict'
+const events = require('./game/events')
 
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 const x = 'x'
@@ -42,6 +43,7 @@ const winner = function (id) {
   const seven = $('#6').text()
   const eight = $('#7').text()
   const nine = $('#8').text()
+  let over = false
 
   if (one === x && two === x && three === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
@@ -54,6 +56,7 @@ const winner = function (id) {
     $('.number-win').append('|')
     // $('.box').off('click')
     turn = 0
+    over = true
   } else if (four === x && five === x && six === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.one').text('yes! X')
@@ -64,6 +67,7 @@ const winner = function (id) {
     $('.nine').text('yes! X')
     $('.number-win').append('|')
     turn = 0
+    over = true
   } else if (seven === x && eight === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.one').text('yes! X')
@@ -94,6 +98,7 @@ const winner = function (id) {
     $('.six').text('yes! X')
     $('.number-win').append('|')
     turn = 0
+    over = true
   } else if (one === x && four === x && seven === x) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.five').text('yes! X')
@@ -125,6 +130,7 @@ const winner = function (id) {
     $('.eight').text('yes! X')
     $('.number-win').append('|')
     turn = 0
+    over = true
   } else if (one === o && two === o && three === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
     $('.seven').text('yes! O')
@@ -145,6 +151,7 @@ const winner = function (id) {
     $('.nine').text('yes! O')
     $('#o_win').append('|')
     turn = 0
+    over = true
   } else if (seven === o && eight === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
     $('.one').text('yes! O')
@@ -165,6 +172,7 @@ const winner = function (id) {
     $('.six').text('yes! O')
     $('#o_win').append('|')
     turn = 0
+    over = true
   } else if (three === o && five === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -175,6 +183,7 @@ const winner = function (id) {
     $('.six').text('yes! O')
     $('#o_win').append('|')
     turn = 0
+    over = true
   } else if (one === o && four === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
@@ -186,6 +195,7 @@ const winner = function (id) {
     $('.six').text('yes! O')
     $('#o_win').append('|')
     turn = 0
+    over = true
   } else if (two === o && five === o && eight === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -196,6 +206,7 @@ const winner = function (id) {
     $('.nine').text('yes! O')
     $('#o_win').append('|')
     turn = 0
+    over = true
   } else if (three === o && six === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -206,11 +217,20 @@ const winner = function (id) {
     $('.eight').text('yes! O')
     $('#o_win').append('|')
     turn = 0
+    over = true
   } else if (turn === 9) {
     $('.message').text('Tie!')
     turn = 0
+    over = true
   } else {
 
+  }
+  return over
+}
+const updateGameApi = function () {
+  if (this.over === true) {
+    console.log('yes')
+    events.onTrack()
   }
 }
 
@@ -231,5 +251,6 @@ const gameEvent = () => {
 
 module.exports = {
   gameEvent,
-  reset
+  reset,
+  updateGameApi
 }

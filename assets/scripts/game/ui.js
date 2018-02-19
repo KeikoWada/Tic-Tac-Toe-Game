@@ -4,6 +4,7 @@ const gameLogic = require('../gameLogic')
 
 const onCreateSuccess = function (data) {
   $('#gamePage').toggle('slow')
+  $('.secondPage').toggle('slow')
   store.game = data.game
 }
 
@@ -25,7 +26,7 @@ const onUpdate = function (data) {
 }
 
 // const onUpdateFailure = function () {
-//   $('#checkmessage').text('Error on updating the game')
+//   $('#checkmessage').text('It\'s already taken')
 //   $('#checkmessage').css('background-color', 'red')
 // }
 
@@ -40,6 +41,11 @@ const onTrackSuccess = function (data) {
 //   $('#checkmessage').css('background-color', 'red')
 // }
 
+const menuPage = function () {
+  $('.secondPage').toggle('slow')
+  $('#gamePage').toggle('slow')
+}
+
 module.exports = {
   onCreateSuccess,
   // onCreateFailure,
@@ -47,5 +53,6 @@ module.exports = {
   // onUpdateFailure,
   onTrackSuccess,
   // onTrackFailure,
-  onCreateNewSuccess
+  onCreateNewSuccess,
+  menuPage
 }
