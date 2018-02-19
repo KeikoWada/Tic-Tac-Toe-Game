@@ -41,14 +41,14 @@ const onUpdate = function (event) {
 
 const onTrack = function (event) {
   // console.log(store.game)
-  // if (gameLogic.over === true) {
-  //  console.log('joooo')
+  if (gameLogic.over === true) {
+    console.log('joooo')
     event.preventDefault()
     api.tracker(event)
       .then(ui.onTrackSuccess)
     //    .catch(ui.onTrackFailure)
   }
-// }
+}
 
 module.exports = {
   onCreateGame,
