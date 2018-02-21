@@ -25,6 +25,10 @@ const updateGame = function (data) {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
     },
+    success: function (response) {
+      console.log('AJAX response from game server', response)
+      return response
+    },
     data: {
       'game': {
         'cell': {

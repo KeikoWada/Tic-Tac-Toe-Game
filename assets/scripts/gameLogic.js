@@ -22,7 +22,7 @@ const playGame = function () {
     winner(this.id)
     $(this).addClass('selected')
     const data = {
-      id: this.id,
+      index: this.id,
       value: store.player,
       over: store.over
     }

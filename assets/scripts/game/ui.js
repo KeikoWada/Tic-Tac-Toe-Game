@@ -17,10 +17,16 @@ const onCreateNewSuccess = function (data) {
   store.game = data.game
 }
 
-const onUpdate = function (data) {
+const onUpdateSuccess = function (data) {
   $('#checkmessage').text('game successfully updated')
   $('#checkmessage').css('background-color', 'green')
   store.game = data.game
+  console.log(data.game)
+}
+
+const onUpdateFailure = function (error) {
+  console.log('Patch did not work right')
+  console.log(error)
 }
 
 // const onUpdateFailure = function () {
@@ -32,8 +38,12 @@ const onTrackSuccess = function (data) {
   // $('#scoremessage').text('User\'s ID is ' + store.user.id )
   // $('#scoremessage').text(store.player)
   $('#scoremessage').css('background-color', 'green')
-  store.game = data.game
-  $('#scoremessage').text(data.games.length)
+  data.game = store.game
+  console.log(store.game)
+  console.log('hi')
+  data.games.cells = gameLogic.gameBoard
+  $('#scoremessage').text('Your game ID is ' + store.user.id + ' and total games played ' + data.games.length)
+  console.log(data)
 }
 
 // const onTrackFailure = function () {
@@ -44,8 +54,8 @@ const onTrackSuccess = function (data) {
 module.exports = {
   onCreateSuccess,
   // onCreateFailure,
-  onUpdate,
-  // onUpdateFailure,
+  onUpdateSuccess,
+  onUpdateFailure,
   onTrackSuccess,
   // onTrackFailure,
   onCreateNewSuccess
