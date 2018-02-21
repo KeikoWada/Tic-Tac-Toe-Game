@@ -10,14 +10,13 @@ const o = 'o'
 
 // here is the switchPlayer -> after click, the icon shows up
 // changing the icon when switch players -> icon will push into the array
-let turn = 0
 
 const gameEvent = () => {
   $('.box').on('click', playGame)
 }
 
+let turn = 0
 const playGame = function () {
-  console.log('playgame')
   if (($(this).text() === '#') || ($(this).text() === '.selected')) {
     switchPlayer(this.id)
     winner(this.id)
@@ -27,12 +26,14 @@ const playGame = function () {
       value: store.player,
       over: store.over
     }
-    console.log('up')
-    // $('.box').on('click', gameLogic.playGame)
     api.updateGame(data)
       .then(ui.onUpdateSuccess)
       .catch(ui.onUpdateFailure)
-    console.log('yes')
+    // store.game = data.game
+    data.game = store.game
+    data.player = store.player
+    console.log(store.game)
+    console.log(data)
   } else {
     $('.message').text('it\'s taken!')
   }
@@ -42,6 +43,7 @@ function switchPlayer (id) {
   if (turn % 2 === 0) {
     gameBoard[id] = 'x'
     store.player = 'x'
+    store.game.cells = gameBoard
     // gameBoard.splice(id, 1, 'x')
     document.getElementById(id).innerHTML = 'x'
     $('.message').text('next turn is you, team O!')
@@ -49,6 +51,7 @@ function switchPlayer (id) {
     // gameBoard.splice(id, 1, 'o')
     gameBoard[id] = 'o'
     store.player = 'o'
+    store.game.cells = gameBoard
     document.getElementById(id).innerHTML = 'o'
     $('.message').text('next turn is you, team X!')
   }

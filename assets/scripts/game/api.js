@@ -18,7 +18,6 @@ const create = function (data) {
 
 const updateGame = function (data) {
   console.log(data)
-  console.log('hh')
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',

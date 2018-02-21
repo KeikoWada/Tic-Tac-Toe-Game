@@ -22,6 +22,7 @@ const onUpdate = function (data) {
   $('#checkmessage').text('game successfully updated')
   $('#checkmessage').css('background-color', 'green')
   store.game = data.game
+  console.log(store.game)
 }
 
 // const onUpdateFailure = function () {
@@ -30,8 +31,8 @@ const onUpdate = function (data) {
 // }
 
 const onTrackSuccess = function (data) {
-  $('#scoremessage').text(store.player)
-  $('#scoremessage').text('hi')
+  $('#scoremessage').text(store.game)
+  // $('#scoremessage').text(store.player)
   $('#scoremessage').css('background-color', 'green')
   store.game = data.game
 }

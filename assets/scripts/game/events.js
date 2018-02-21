@@ -30,7 +30,7 @@ const onUpdate = function (event) {
     value: store.player,
     over: store.over
   }
-  // $('.box').on('click', gameLogic.playGame)
+
   api.updateGame(data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
@@ -40,7 +40,6 @@ const onTrack = function (event) {
   event.preventDefault()
   api.tracker(event)
     .then(ui.onTrackSuccess)
-  //  .catch(ui.onTrackFailure)
 }
 
 module.exports = {
