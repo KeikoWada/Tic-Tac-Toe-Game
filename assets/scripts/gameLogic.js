@@ -1,6 +1,8 @@
 'use strict'
 const store = require('./store')
 // const gameEvents = require('./game/events')
+const api = require('./game/api')
+const ui = require('./game/ui')
 
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 const x = 'x'
@@ -9,11 +11,28 @@ const o = 'o'
 // here is the switchPlayer -> after click, the icon shows up
 // changing the icon when switch players -> icon will push into the array
 let turn = 0
+
+const gameEvent = () => {
+  $('.box').on('click', playGame)
+}
+
 const playGame = function () {
+  console.log('playgame')
   if (($(this).text() === '#') || ($(this).text() === '.selected')) {
     switchPlayer(this.id)
     winner(this.id)
     $(this).addClass('selected')
+    const data = {
+      id: this.id,
+      value: store.player,
+      over: store.over
+    }
+    console.log('up')
+    // $('.box').on('click', gameLogic.playGame)
+    api.updateGame(data)
+      .then(ui.onUpdateSuccess)
+      .catch(ui.onUpdateFailure)
+    console.log('yes')
   } else {
     $('.message').text('it\'s taken!')
   }
@@ -245,10 +264,6 @@ const reset = function () {
 }
 //  )
 // }
-
-const gameEvent = () => {
-  $('.box').on('click', playGame)
-}
 
 module.exports = {
   gameEvent,

@@ -30,7 +30,8 @@ const onUpdate = function (data) {
 // }
 
 const onTrackSuccess = function (data) {
-  $('#scoremessage').text('here')
+  $('#scoremessage').text(store.player)
+  $('#scoremessage').text('hi')
   $('#scoremessage').css('background-color', 'green')
   store.game = data.game
 }

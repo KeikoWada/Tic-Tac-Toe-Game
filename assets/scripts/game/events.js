@@ -4,6 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 const store = require('../store')
+// const gameLogic = require('../gameLogic.js')
 
 const onCreateGame = function (event) {
   event.preventDefault()
@@ -29,7 +30,7 @@ const onUpdate = function (event) {
     value: store.player,
     over: store.over
   }
-
+  // $('.box').on('click', gameLogic.playGame)
   api.updateGame(data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
