@@ -26,8 +26,8 @@ const onUpdate = function (event) {
   event.preventDefault()
   const data = {
     id: event.target.id,
-    value: store.game.id,
-    over: store.game.over
+    value: store.player,
+    over: store.over
   }
 
   api.updateGame(data)
@@ -39,7 +39,7 @@ const onTrack = function (event) {
   event.preventDefault()
   api.tracker(event)
     .then(ui.onTrackSuccess)
-    .catch(ui.onTrackFailure)
+  //  .catch(ui.onTrackFailure)
 }
 
 module.exports = {
