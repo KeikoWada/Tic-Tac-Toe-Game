@@ -32,8 +32,8 @@ const playGame = function () {
     // store.game = data.game
     data.game = store.game
     data.player = store.player
-    console.log(store.game)
-    console.log(data)
+    // console.log(store.game)
+    // console.log(data)
   } else {
     $('.message').text('it\'s taken!')
   }

@@ -35,17 +35,15 @@ const onUpdateSuccess = function (data) {
 
 const onTrackSuccess = function (data) {
   data.game = store.game
-  console.log(store.game)
+  // console.log(store.game)
   $('#messageTwo').text(store.user.email + ' played ' + data.games.length + ' times! great job!')
   $('#messageTwo').css('background-color', 'gray')
-  console.log(data)
+  // console.log(data)
 }
 
 const onTrackSuccessTwo = function (data) {
-  // $('#scoremessage').text('User\'s ID is ' + store.user.id )
   data.game = store.game
   $('#signInMessage').text(store.user.email + ' played ' + data.games.length + ' times! great job!')
-//  $('#history').css('background-color', 'gray')
 }
 
 module.exports = {
