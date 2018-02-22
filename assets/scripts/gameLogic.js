@@ -258,15 +258,12 @@ const winner = function (id) {
 }
 
 const reset = function () {
-  // $('.restart').on('click', function () {
   $('.box').removeClass('selected')
   $('.box').text('#')
   $('.message').text('next turn is...')
   turn = 0
   gameBoard = ['', '', '', '', '', '', '', '', '']
 }
-//  )
-// }
 
 module.exports = {
   gameEvent,

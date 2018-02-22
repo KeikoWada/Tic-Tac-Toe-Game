@@ -15,14 +15,17 @@ $(() => {
   // player click -> function 'switchPlayer' happens
   // create a new Games on the server
   authEvents.addHandlers()
-  // $('.newGame').on('click', function () {
-  //   $('#gamePage').toggle('slow')
-  // })
+  $('.newGame').on('click', function () {
+    $('#gamePage').toggle('slow')
+    $('.secondPage').toggle('slow')
+  })
   $('.newGame').on('click', gameEvents.onCreateGame)
   $('.record').on('click', gameEvents.onTrack)
   gameLogic.gameEvent()
   // $('.restart').on('click', gameLogic.reset)
   $('#restart').on('click', gameEvents.onCreateNewGame)
+  $('#out-button').on('click', gameLogic.reset)
+//  $('.game-states').on('click', gameEvents.onTrack)
 })
 
 // use require with a reference to bundle the file and use it in this file
