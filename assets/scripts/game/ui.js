@@ -40,7 +40,7 @@ const onTrackSuccess = function (data) {
   data.game = store.game
   console.log(store.game)
   // data.games.cells = gameLogic.gameBoard
-  $('#messageTwo').text('Your game ID is ' + store.user.id + ' and total games played ' + data.games.length)
+  $('#messageTwo').text(store.user.email + ' played ' + data.games.length + ' times! great job!')
   console.log(data)
 }
 

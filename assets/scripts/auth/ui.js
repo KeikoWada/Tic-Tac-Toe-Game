@@ -15,10 +15,10 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   $('input').val('')
-  $('#messageTwo').text('Signed in successfully')
-  $('#messageTwo').css('background-color', 'green')
-  $('#message').text('Signed in successfully')
-  $('#message').css('background-color', 'green')
+  $('#signInMessage').text('Signed in successfully')
+  $('#signInMessage').css('background-color', 'green')
+  // $('#signInMessage').text('Signed in successfully')
+  // $('#message').css('background-color', 'green')
   $('.secondPage').toggle('slow')
   $('#first-page').toggle('slow')
   store.user = data.user
