@@ -9,6 +9,7 @@ const signUpSuccess = function () {
 }
 
 const signUpFailure = function () {
+  $('input').val('')
   $('#message').text('Error on signing up')
   $('#message').css('background-color', 'red')
 }
@@ -25,7 +26,8 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function () {
-  $('#message').text('Error in signing up')
+  $('input').val('')
+  $('#message').text('Error in signing in')
   $('#message').css('background-color', 'red')
 }
 
@@ -36,11 +38,13 @@ const changePasswordSuccess = function () {
 }
 
 const changePasswordFailure = function () {
+  $('input').val('')
   $('#messageTwo').text('Error on changing password')
   $('#messageTwo').css('background-color', 'red')
 }
 
 const signOutSuccess = function () {
+  $('input').val('')
   $('#message').text('Signed out successfully')
   $('#message').css('background-color', 'green')
   $('.gamePage').toggle('slow')
@@ -48,6 +52,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
+  $('input').val('')
   $('#messageTwo').text('Error on signing out')
   $('#messageTwo').css('background-color', 'red')
 }
