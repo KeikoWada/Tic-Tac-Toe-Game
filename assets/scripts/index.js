@@ -4,7 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
 const gameEvents = require('./game/events.js')
-const store = require('./store')
+// const store = require('./store')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -23,6 +23,7 @@ $(() => {
   })
   $('.newGame').on('click', gameEvents.onCreateGame)
   $('.record').on('click', gameEvents.onTrack)
+  $('.history-button').on('click', gameEvents.onTrackTwo)
   gameLogic.gameEvent()
   // $('.restart').on('click', gameLogic.reset)
   $('#restart').on('click', gameEvents.onCreateNewGame)

@@ -42,9 +42,15 @@ const onTrack = function (event) {
     .then(ui.onTrackSuccess)
 }
 
+const onTrackTwo = function (event) {
+  event.preventDefault()
+  api.tracker(event)
+    .then(ui.onTrackSuccessTwo)
+}
 module.exports = {
   onCreateGame,
   onUpdate,
   onTrack,
-  onCreateNewGame
+  onCreateNewGame,
+  onTrackTwo
 }

@@ -56,15 +56,33 @@ footer {
 
 .menue {
   color: pink;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .intro {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .gamePage {
   display: none;
+}
+
+.newGame {
+  border: 0;
+  background-color: #ffee92;
+  color: gray;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 40px;
+}
+
+.history-button {
+  border: 0;
+  background-color: #ffee92;
+  color: gray;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 40px;
 }
 
 .score-Bord {
@@ -90,7 +108,28 @@ footer {
   background-color: #89fff1;
 }
 
-.reset {
+.record {
+  border: 0;
+  background-color: #ffee92;
+  color: gray;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 40px;
+}
+
+#signInMessage {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+#history {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+#restart {
   border: 0;
   background-color: #ffee92;
   color: gray;

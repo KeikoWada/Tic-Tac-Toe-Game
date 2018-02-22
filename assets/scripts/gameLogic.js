@@ -261,6 +261,8 @@ const reset = function () {
   $('.box').removeClass('selected')
   $('.box').text('#')
   $('.message').text('next turn is...')
+  $('#signInMessage').text('')
+  $('#messageTwo').text('')
   turn = 0
   gameBoard = ['', '', '', '', '', '', '', '', '']
 }

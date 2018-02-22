@@ -34,20 +34,19 @@ const onUpdateSuccess = function (data) {
 // }
 
 const onTrackSuccess = function (data) {
-  // $('#scoremessage').text('User\'s ID is ' + store.user.id )
-  // $('#scoremessage').text(store.player)
-  $('#scoremessage').css('background-color', 'green')
   data.game = store.game
   console.log(store.game)
-  // data.games.cells = gameLogic.gameBoard
   $('#messageTwo').text(store.user.email + ' played ' + data.games.length + ' times! great job!')
+  $('#messageTwo').css('background-color', 'gray')
   console.log(data)
 }
 
-// const onTrackFailure = function () {
-//   $('#checkmessage').text('Error on updating the Winner')
-//   $('#checkmessage').css('background-color', 'red')
-// }
+const onTrackSuccessTwo = function (data) {
+  // $('#scoremessage').text('User\'s ID is ' + store.user.id )
+  data.game = store.game
+  $('#signInMessage').text(store.user.email + ' played ' + data.games.length + ' times! great job!')
+//  $('#history').css('background-color', 'gray')
+}
 
 module.exports = {
   onCreateSuccess,
@@ -55,6 +54,7 @@ module.exports = {
   onUpdateSuccess,
   // onUpdateFailure,
   onTrackSuccess,
+  onTrackSuccessTwo,
   // onTrackFailure,
   onCreateNewSuccess
 }
