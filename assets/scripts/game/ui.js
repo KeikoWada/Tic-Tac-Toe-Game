@@ -40,8 +40,7 @@ const onTrackSuccess = function (data) {
   $('#scoremessage').css('background-color', 'green')
   data.game = store.game
   console.log(store.game)
-  console.log('hi')
-  data.games.cells = gameLogic.gameBoard
+  // data.games.cells = gameLogic.gameBoard
   $('#scoremessage').text('Your game ID is ' + store.user.id + ' and total games played ' + data.games.length)
   console.log(data)
 }
