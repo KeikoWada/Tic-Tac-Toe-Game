@@ -1,6 +1,5 @@
 'use strict'
 const store = require('../store')
-// const signInOut = require('./signinOut')
 
 const signUpSuccess = function () {
   $('input').val('')
@@ -18,8 +17,6 @@ const signInSuccess = function (data) {
   $('input').val('')
   $('#signInMessage').text('Signed in successfully')
   $('#signInMessage').css('background-color', 'green')
-  // $('#signInMessage').text('Signed in successfully')
-  // $('#message').css('background-color', 'green')
   $('.secondPage').toggle('slow')
   $('#first-page').toggle('slow')
   store.user = data.user

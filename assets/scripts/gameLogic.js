@@ -34,6 +34,8 @@ const playGame = function () {
     data.player = store.player
     // console.log(store.game)
     // console.log(data)
+  } else if (gameOver === true) {
+    $('.message').text('Game Over!')
   } else {
     $('.message').text('it\'s taken!')
   }
@@ -58,6 +60,7 @@ function switchPlayer (id) {
   turn++
 }
 
+let gameOver = false
 let xWin = 1
 let oWin = 1
 const winner = function (id) {
@@ -82,6 +85,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (four === x && five === x && six === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.one').text('yes! X')
@@ -93,6 +97,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (seven === x && eight === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.one').text('yes! X')
@@ -104,6 +109,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (one === x && four === x && seven === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.two').text('yes! X')
@@ -115,6 +121,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (two === x && five === x && eight === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.one').text('yes! X')
@@ -126,6 +133,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (three === x && six === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.one').text('yes! X')
@@ -137,6 +145,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (one === x && five === x && nine === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.two').text('yes! X')
@@ -148,6 +157,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (three === x && five === x && seven === x) {
     $('.message').text('Winner Winner Chicken Dinner, Xman!')
     $('.one').text('yes! X')
@@ -159,6 +169,7 @@ const winner = function (id) {
     $('.number-win').text(xWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (one === o && two === o && three === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.four').text('yes! O')
@@ -170,6 +181,7 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (four === o && five === o && six === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -181,6 +193,7 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (seven === o && eight === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -192,6 +205,7 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (one === o && four === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
     $('.two').text('yes! O')
@@ -203,6 +217,7 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (two === o && five === o && eight === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -214,6 +229,7 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (three === o && six === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O!')
     $('.one').text('yes! O')
@@ -225,6 +241,7 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (one === o && five === o && nine === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.two').text('yes! O')
@@ -236,6 +253,7 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (three === o && five === o && seven === o) {
     $('.message').text('Winner Winner Chicken Dinner, mr.O')
     $('.one').text('yes! O')
@@ -247,10 +265,12 @@ const winner = function (id) {
     $('#o_win').text(oWin++)
     turn = 0
     store.over = true
+    gameOver = true
   } else if (turn === 9) {
     $('.message').text('Tie!')
     turn = 0
     store.over = true
+    gameOver = true
   } else {
     store.over = false
   }
@@ -264,6 +284,7 @@ const reset = function () {
   $('#messageTwo').text('')
   $('input').val('')
   turn = 0
+  gameOver = false
   gameBoard = ['', '', '', '', '', '', '', '', '']
 }
 
