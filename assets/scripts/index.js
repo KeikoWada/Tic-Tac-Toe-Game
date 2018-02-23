@@ -28,6 +28,7 @@ $(() => {
   // $('.restart').on('click', gameLogic.reset)
   $('#restart').on('click', gameEvents.onCreateNewGame)
   $('#out-button').on('click', gameLogic.reset)
+  $('#out-button').on('click', gameLogic.resetScore)
 //  $('.game-states').on('click', gameEvents.onTrack)
 })
 

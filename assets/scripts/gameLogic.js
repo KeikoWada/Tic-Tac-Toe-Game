@@ -267,7 +267,15 @@ const reset = function () {
   gameBoard = ['', '', '', '', '', '', '', '', '']
 }
 
+const resetScore = function () {
+  $('.number-win').text('')
+  $('#o_win').text('')
+  xWin = 1
+  oWin = 1
+}
+
 module.exports = {
   gameEvent,
-  reset
+  reset,
+  resetScore
 }
