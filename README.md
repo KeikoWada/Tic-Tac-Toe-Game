@@ -22,7 +22,9 @@ Document your planning
 Then start writing the code.
 
 List unsolved problems which would be fixed in future iterations.
-
+- make code DRY
+- organize code in a defferent files
+- using boostrap
 
 
 Link to wireframes and user stories.
