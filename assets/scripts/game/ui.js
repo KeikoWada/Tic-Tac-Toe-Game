@@ -38,6 +38,10 @@ const onTrackSuccess = function (data) {
   // console.log(store.game)
   $('#messageTwo').text(store.user.email + ' played ' + data.games.length + ' times! great job!')
   $('#messageTwo').css('background-color', 'gray')
+  $('#messageTwo').delay(5000).queue(function () {
+    $(this).removeAttr('style')
+    $(this).text('')
+  })
   // console.log(data)
 }
 

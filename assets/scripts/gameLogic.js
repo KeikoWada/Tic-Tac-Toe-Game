@@ -34,8 +34,8 @@ const playGame = function () {
     data.player = store.player
     // console.log(store.game)
     // console.log(data)
-  } else if (gameOver === true) {
-    $('.message').text('Game Over!')
+  } else if (gameOver === true || turn === 9) {
+    $('.message').text('Game Over')
   } else {
     $('.message').text('it\'s taken!')
   }
@@ -283,6 +283,7 @@ const reset = function () {
   $('#signInMessage').text('')
   $('#messageTwo').text('')
   $('input').val('')
+  $('#messageTwo').dequeue()
   turn = 0
   gameOver = false
   gameBoard = ['', '', '', '', '', '', '', '', '']

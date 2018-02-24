@@ -19,7 +19,7 @@ $(() => {
   $('.newGame').on('click', function () {
     $('#gamePage').toggle('slow')
     $('.secondPage').toggle('slow')
-    $('#user').toggle('hi')
+    // $('#user').toggle('hi')
   })
   $('.newGame').on('click', gameEvents.onCreateGame)
   $('.record').on('click', gameEvents.onTrack)
