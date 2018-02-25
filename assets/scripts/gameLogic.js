@@ -21,6 +21,7 @@ const playGame = function () {
     switchPlayer(this.id)
     winner(this.id)
     $(this).addClass('selected')
+    $('#messageTwo').dequeue()
     const data = {
       index: this.id,
       value: store.player,
