@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Tic Tac Toe</title>
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+           <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <!-- Do not add `script` tags-->
+           <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+           <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+
+    <!--sign up page-->
+        <div id="first-page">
+        <h1 class="title">Tic Tac Toe Game</h1>
+
+          <p id="message"></p>
+        <form id="sign-up" class="auth">
+        <fieldset>
+            <legend>Sign up!</legend>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <button type="submit" value="Sign up!">Sign up!</button>
+        </fieldset>
+        </form>
+
+        <form id="sign-in" class="auth">
+        <fieldset>
+            <legend>Sign In!</legend>
+            <input name="credentials[email]" type="text" placeholder="Email">
+            <input name="credentials[password]" type="password" placeholder="Password">
+            <button id="in-button" type="submit" value="Sign in">Sign in!</button>
+        </fieldset>
+        </form>
+      </div>
+
+        <div class="secondPage">
+            <h1 class="menue">Welcome Tic Tac Toe Game!</h1>
+            <p class="intro">Tic-tac-toe is a simple & FUN game for two players, X and O <br> who take turns marking the spaces in a 3×3 grid.<br> The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. </p>
+            <p id="signInMessage"></p>
+            <button class="newGame">Play New Game</button>
+            <button class="history-button">game history</button>
+            <p id="history"></p>
+
+        </div>
+
+        <div id="gamePage" class="gamePage">
+          <h1 class="title">Tic Tac Toe Game!</h1>
+          <p class="intro">Tic-tac-toe is a simple & FUN game for two players, X and O <br> who take turns marking the spaces in a 3×3 grid.<br> The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. </p>
+          <form id="change-password" class="game-auth">
+          <fieldset>
+            <legend>Change Password?</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <button type="submit" value="Change Password">Change Password?</button>
+          </fieldset>
+          </form>
+
+          <form id="sign-out" class="game-auth">
+          <fieldset>
+             <legend>Sign out</legend>
+             <button id="out-button" type="submit" value="Sign out">Sign-out</button>
+          </fieldset>
+          </form>
+          <p id="messageTwo"></p>
+          <div class="score-Bord">
+              <span class="score=x">x won</span>
+              <strong id="x_win" class="number-win"></strong>
+              <span class="times">time(s)</span>
+          </div>
+          <div class="score-Bord">
+              <span class="score=o">O won</span>
+              <strong id="o_win"></strong>
+              <span class="times">time(s)</span>
+          </div>
+          <form class="message">next turn is ...</form>
+
+          <div class="gameBoard">
+            <ul class="gameBoard">
+             <li id="0" class="box one">#</li>
+             <li id="1" class="box two">#</li>
+             <li id="2" class="box three">#</li>
+             <li id="3" class="box four">#</li>
+             <li id="4" class="box five">#</li>
+             <li id="5" class="box six">#</li>
+             <li id="6" class="box seven">#</li>
+             <li id="7" class="box eight">#</li>
+             <li id="8" class="box nine">#</li>
+            </ul>
+         </div>
+         <footer>
+           <button id="restart">Play Again!</button>
+           <button class="record">record</button>
+         </footer>
+         </div>
+      </body>
+      </html>
