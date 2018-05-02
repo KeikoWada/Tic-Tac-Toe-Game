@@ -1,7 +1,7 @@
 ###  Link
 https://keikowada.github.io/Tic-Tac-Toe-Game/
 
-List technologies used.
+### List technologies used.
 - HTML
 - CSS
 - Jquery
@@ -20,7 +20,7 @@ After function is working, I then design with CSS for the rest.
 I console to see which steps of function is working or what data is passing in the parameter.
 
 ### Unsolved problems which would be fixed in future iterations.
-- using boostrap
+Using boostrap
 
 
 ### Link to wireframes and user stories.
